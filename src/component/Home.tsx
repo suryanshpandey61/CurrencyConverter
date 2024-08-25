@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Home: React.FC = () => {
-    const [amount, setAmount] = useState<number | ''>(''); // Use '' instead of undefined
+    const [amount, setAmount] = useState<number | ''>(1); // Use '' instead of undefined
     const [convertedAmount, setConvertedAmount] = useState<string>('');
     const [fromCurrency, setFromCurrency] = useState<string>('INR');
     const [toCurrency, setToCurrency] = useState<string>('USD');
