@@ -70,7 +70,7 @@ const Home: React.FC = () => {
                     <input
                         type="number"
                         name="price"
-                        className="border border-black rounded-xl ml-1"
+                        className="border p-1 border-black rounded-xl ml-1"
                         value={amount}
                         onChange={handleAmountChange}
                     />
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
                 <div>
                     <label>Convert From:</label>
                     <select
-                        className="border border-black w-[190px] ml-2 rounded-xl"
+                        className="border p-1 border-black w-[190px] ml-2 rounded-xl"
                         value={fromCurrency}
                         onChange={handleFromCurrencyChange}
                     >
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
                 <div>
                     <label>Convert To:</label>
                     <select
-                        className="border border-black w-[190px] ml-7 rounded-xl"
+                        className="border border-blackp-1 w-[190px] ml-7 rounded-xl"
                         value={toCurrency}
                         onChange={handleToCurrencyChange}
                     >
@@ -114,7 +114,7 @@ const Home: React.FC = () => {
                     <input
                         type="text"
                         name="convertedAmount"
-                        className="border border-black rounded-xl ml-1 w-[150px]"
+                        className="border border-black p-1 rounded-xl ml-1 w-[150px]"
                         value={convertedAmount}
                         readOnly
                     />
