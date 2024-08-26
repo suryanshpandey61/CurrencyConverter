@@ -58,15 +58,16 @@ const Home: React.FC = () => {
     };
 
     return (
-        <div className='main-div min-h-screen'>
-            {/* heading */}
-            <div>
-                <h1 className="text-4xl font-bold text-center">Currency Converter</h1>
+        <div className='main-div min-h-screen '>
+          <div className='p-[80px] '>
+              {/* heading */}
+              <div>
+                <h1 className="text-4xl font-bold text-center  underline ">Currency Converter</h1>
             </div>
 
-            <div className="flex flex-col gap-y-6 mx-auto justify-center items-center mt-11">
+            <div className="flex border border-black p-5 w-[400px] rounded-md flex-col gap-y-6 mx-auto justify-center items-center mt-11">
                 <div>
-                    <label htmlFor="price">Enter Amount: </label>
+                    <label htmlFor="price" className=' font-bold'>Enter Amount: </label>
                     <input
                         type="number"
                         name="price"
@@ -78,7 +79,7 @@ const Home: React.FC = () => {
 
                 {/* Convert from option dropdown */}
                 <div>
-                    <label>Convert From:</label>
+                    <label className=' font-bold'>Convert From:</label>
                     <select
                         className="border p-1 border-black w-[190px] ml-2 rounded-xl"
                         value={fromCurrency}
@@ -94,9 +95,9 @@ const Home: React.FC = () => {
 
                 {/* Convert to option dropdown */}
                 <div>
-                    <label>Convert To:</label>
+                    <label className=' font-bold'>Convert To:</label>
                     <select
-                        className="border border-blackp-1 w-[190px] ml-7 rounded-xl"
+                        className="border border-whitep-1 w-[190px] ml-7 rounded-xl"
                         value={toCurrency}
                         onChange={handleToCurrencyChange}
                     >
@@ -110,7 +111,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="convertedAmount">Converted Amount: </label>
+                    <label htmlFor="convertedAmount" className=' font-bold'>Converted Amount: </label>
                     <input
                         type="text"
                         name="convertedAmount"
@@ -122,7 +123,8 @@ const Home: React.FC = () => {
 
                 <div>
                     <button
-                        className="border border-black px-[80px] py-[8px] mt-9 font-bold rounded-md"
+                        className="border hover:bg-green-600 hover:text-white transition-all duration-500
+                         border-black px-[80px] py-[8px] mt-9 font-bold rounded-md"
                         onClick={handleConvert}
                         disabled={loading}
                     >
@@ -132,6 +134,7 @@ const Home: React.FC = () => {
 
                 {error && <div className="text-red-500 mt-2">{error}</div>}
             </div>
+          </div>
         </div>
     );
 };
